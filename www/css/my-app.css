@@ -1,0 +1,169 @@
+.aler ta{
+	position:absolute;
+	right:10px;
+	z-index:10;
+	}
+.icon-categoria{
+	margin:1em 0em;
+	width:42px;
+	}
+	
+.icon-categoria img{
+	width:100%;
+	}
+.imagen-responsive{
+	width:100%;
+	}
+
+.imagen-responsive img{
+	width:100%;
+	}
+
+.valor{
+    font-size: 2em;
+    margin: .2em auto;
+    line-height: 2em;
+	}
+.marging-0{
+	margin:0;
+	}
+.marging-centrado{
+	margin:auto;
+	}
+.marging-vertical-2em{
+	margin:2em auto;
+	}
+	
+.categoria{
+	margin:1em auto;
+	}
+.display-inline{
+	display:inline-block;
+	vertical-align: middle;
+	}
+.content-block-inner{
+	background-color:rgba(250, 250, 250, 0.7);
+	}
+
+.page-content{
+	background:url(../img/bg.jpg);
+	background-size:cover;
+	}
+	
+.toolbar{
+	height:3em;
+	}
+
+.tabbar-label{
+	font-size:.7em !important;
+	margin:0 !important;
+	}
+	
+.table-rango{
+	width:100% !important;
+	text-align:center !important;	
+	}
+
+.table-rango td{
+	width:8.4% !important;
+	}
+
+
+.text-center{
+	text-align:center;
+	}
+
+.title-modal{
+	font-size:1.2em;
+	}
+
+.view-main{
+	padding-bottom:3.2em !important;	
+	}
+.video-responsive{
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+display:block;
+
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+position: absolute !important;
+top: 0 !important;
+left: 0 !important;
+width: 100% !important;
+height: 100% !important;
+}
+
+iframe.vidembebido {
+max-width: 96% !important;
+display: block;
+margin: 10px auto;
+}
+	
+.range-slider{
+	}
+
+.fondo-verde{
+    background-color:  #95f159;
+}
+
+.fondo-amarillo{
+    background-color:  #f7f95b;
+}
+
+.fondo-rojo{
+    background-color: #df0909;
+}
+
+.borde-termo{
+    border: 1px solid black;
+}
+
+.color-gris{
+    color: darkgray;
+}
+
+.color-negro{
+    color: black;
+}
+
+.text-middle{
+    margin: 1em 0;
+}
+.border-redondeo{
+    border-radius: 10px;
+}
+.borde-derecho{
+    border-radius: 0px 10px 10px 0px;
+}
+.borde-izquierdo{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.alto-col{
+    height: 30px;
+    max-height: 30px;
+}
+.fondo-azul{
+    background-color: #007aff;
+}
+.texto-blanco{
+    color: #fff;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.text-dorado{
+	color:#948034;
+}
+.logo{
+    width: 200px;
+    height: 45px;
+}

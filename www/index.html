@@ -1,0 +1,73 @@
+<html lang="es">
+<head>
+
+<!--CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/font-awesome.css">
+<!--    <link type="text/css" rel="stylesheet" href="css/jquery.mmenu-left.all.css" /> -->
+    <link type="text/css" rel="stylesheet" href="css/animate.css" />
+    <link type="text/css" rel="stylesheet" href="css/sweetalert2.css" />
+    
+    
+    <title></title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <!--JS-->
+    <script src="cordova.js"></script>          
+    <script src="js/app.js"></script>           
+    <script src="xdk/init-dev.js"></script> 
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+<!--    <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>-->
+    <script type="text/javascript" src="js/sweetalert2.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script> 
+    
+</head>
+<body>
+    <div class="page-content">
+<!--    <script src="js/menu.js"></script> -->
+        <script type="text/javascript">
+            $(function() {
+               // $('nav#menu').mmenu();
+            });
+        </script>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="col-xs-12">
+                        <img class="img-responsive text-center" style="margin: 0 auto; padding: 15px;" src="img/logo_appgricola_texto.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="m ain">
+                <div class="col-md-12">
+                    <div class="ventana margin- centro" style="margin: 0 auto;">
+                        <h2 class="text-dorado">Ingreso al sistema</h2>
+                        <form action="principal.html">
+                            <input type="text" name="" placeholder="Usuario" class="input-group input-sencillo">
+                            <input type="password" name="" placeholder="Contraseña" class="input-group input-sencillo">
+                            <button type="submit" class="btn-dorado text-right"><span class="fa fa-check-circle"> </span> Ingresar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>    
+</body>
+</html>
