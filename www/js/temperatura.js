@@ -52,7 +52,8 @@ function consumeTemperatura(){
                                 function(tx,respuesta){
                                     if(contador == (cuantos-1)){
                                         _preloader("",true);
-                                        promediarTemperatura();
+                                        //promediarTemperatura();
+                                        obtenerUltimoRegistroTemperatura();
                                      }
                                 contador++;
                             });
@@ -82,6 +83,28 @@ function promediarTemperatura(){
                         }//for
                 }else{
                                                 //tipo,titulo,mensaje,btnConfirmLabel,callbackSuccess,btnCancelLabel,callbackError
+                        _mensajeConfirmCancellCallback("info","Error al obtener los datos.","No hay registros para temperatura.","Entiendo",'','','');
+                        $('#total_temperatura').text(0+"° C");
+                        //$('#total_temperatura').text(promedio.toFixed(2)+"° C");
+                }//if
+            });
+    });
+}
+
+function obtenerUltimoRegistroTemperatura(){
+    console.log("entro a la funcion para obtener el ultimo registro de Temperatura");
+     base.crearBaseDeDatos(function(){
+        //promediar para temperatura
+            base.selecciona("SELECT *  FROM temperatura ORDER BY TEM_FECHASTRING DESC", function(tx1,res){
+                if(res.rows.length>0){
+                        for(var i=res.rows.length-1; i>=0; i--){
+                            if(i==(res.rows.length-1)){
+                                console.log("TEMPERATURA "+res.rows.item(i).TEM_FECHASTRING+" a las "+res.rows.item(i).TEM_HORASTRING+" es : "+res.rows.item(i).TEM_VALOR);
+                                $('#total_temperatura').text(res.rows.item(i).TEM_VALOR+"° C");
+                            }
+                        }//for
+                }else{
+                        //tipo,titulo,mensaje,btnConfirmLabel,callbackSuccess,btnCancelLabel,callbackError
                         _mensajeConfirmCancellCallback("info","Error al obtener los datos.","No hay registros para temperatura.","Entiendo",'','','');
                         $('#total_temperatura').text(0+"° C");
                         //$('#total_temperatura').text(promedio.toFixed(2)+"° C");

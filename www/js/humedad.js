@@ -65,7 +65,8 @@ function consumeHumedad(){
                                     console.log("cuantos: "+cuantos+" : "+contador);
                                        if(contador == (cuantos-1)){
                                             _preloader("",true);
-                                            promediarHumedad();
+                                            //promediarHumedad();
+                                           obtenerUltimoRegistroHumedad();
                                             consumeTemperatura();
                                          }
                                 contador++;
@@ -107,6 +108,32 @@ function promediarHumedad(){
             }); 
     });   
 }
+
+
+function obtenerUltimoRegistroHumedad(){
+    console.log("entro a la funcion para obtener el ultimo registro de Humedad");
+    base.crearBaseDeDatos(function(){
+            //promediar para humedad
+            base.selecciona("SELECT *  FROM humedad ORDER BY HUM_FECHASTRING DESC", function(tx1,res){
+                console.log("la consulta obtuvo: "+res);
+                if(res.rows.length>0){
+                        for(var i=res.rows.length-1; i>=0; i--){
+                            if(i==(res.rows.length-1)){
+                                console.log("Humedad "+res.rows.item(i).HUM_FECHASTRING+" a las "+res.rows.item(i).HUM_HORASTRING+" es : "+res.rows.item(i).HUM_VALOR);
+                                $('#total_humedad').text(res.rows.item(i).HUM_VALOR);  
+                            }
+                            
+                        }//for
+                }else{
+                    //tipo,titulo,mensaje,btnConfirmLabel,callbackSuccess,btnCancelLabel,callbackError
+                    _mensajeConfirmCancellCallback("info","Error al obtener los datos.","No hay registros para humedad.","Entiendo",'','','');
+                    $('#total_humedad').text(0);
+                }//if
+            }); 
+    });   
+}
+
+
 function dropHumedad(){
     _preloader("Eliminando la tabla");
     console.log("Eliminando y creando la tabla de huemdad");
